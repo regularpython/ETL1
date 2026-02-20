@@ -1,0 +1,20 @@
+{
+  "Records": [
+    {
+      "messageId": "06cdf70c-4c13-4bd0-bd4c-eeeb3fd8ea6c",
+      "receiptHandle": "AQEBcsTABI3nFjgYWVKd+X9x18w0NfETFup9zwRCRjjpUVFD6+QmDwmzFywriU7Dh7y+kAr6JkURlrIw/vXqrcmaCNZRtJTfs87tXsZsgXndubfLfnqZv1mavTJ+ecDYXzToREZ/tch3gH9MNu9LEDFTi41yHBpoimFoS7DqCfQ0l5kUpPDiHuNiXidykTToRdUOKwzgWOD6cvVgFTNDXaBuRSJqIi7gSjsUqr6k2ylSRV75KnfJR+1sv2z9XyY0Ab7F7EEBF7aFE49I7lRAflzFczMubwSnqWTcO1a596BMXnAz0+C55C5DYE+8K7o1wckuyBp071kZWB5/n55n/wvG7m+mTzwn4Qi42x29fvzPt+et6EkGyib44sn13Du+XEyj",
+      "body": "{\n        \"header\": {\n            \"eventName\": \"carRentalEvent\",\n            \"publisher\": \"abc12345-6789-0abc-def1-23456789abcd\",\n            \"organizationId\": \"Rental Event\",\n            \"source\": \"my.rental.service\",\n            \"timestamp\": \"timestamp\"\n        },\n        \"body\": {\n            \"vehicles\": [\n                {\n                    \"vehicle_id\": 1,\n                    \"make\": \"Toyota\",\n                    \"model\": \"Camry\",\n                    \"year\": 2022,\n                    \"license_plate\": \"ABC1234\",\n                    \"status\": \"available\"\n                }\n            ]\n        }\n      }",
+      "attributes": {
+        "ApproximateReceiveCount": "1",
+        "SentTimestamp": "1771559414744",
+        "SenderId": "339713066136",
+        "ApproximateFirstReceiveTimestamp": "1771559414755"
+      },
+      "messageAttributes": {},
+      "md5OfBody": "2457c89f9c5b18e7f3a23d349a418315",
+      "eventSource": "aws:sqs",
+      "eventSourceARN": "arn:aws:sqs:us-east-1:339713066136:BatchFebSQS",
+      "awsRegion": "us-east-1"
+    }
+  ]
+}
