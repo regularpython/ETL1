@@ -8,7 +8,6 @@ from src.services.car_rental_service import CarRental
 
 def lambda_handler(event, context):
 
-    print(event)
     body = json.loads(event['Records'][0]['body'])
     car = CarRental()
     car.read(body)
