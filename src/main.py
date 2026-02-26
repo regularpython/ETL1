@@ -1,5 +1,4 @@
 import json
-
 from src.services.car_rental_service import CarRental
 
 
@@ -8,15 +7,18 @@ from src.services.car_rental_service import CarRental
 
 def lambda_handler(event, context):
 
-    body = json.loads(event['Records'][0]['body'])
+    body = json.loads(event["Records"][0]["body"])
     car = CarRental()
+
     car.read(body)
     car.transform()
     car.load()
     return {
         "statusCode": 200,
-        "body": json.dumps({
-            "message": "hello world",
-            # "location": ip.text.replace("\n", "")
-        }),
+        "body": json.dumps(
+            {
+                "message": "hello world",
+                # "location": ip.text.replace("\n", "")
+            }
+        ),
     }

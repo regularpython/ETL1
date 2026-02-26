@@ -1,6 +1,8 @@
 from pydantic import BaseModel, field_validator
 from typing import List
 
+from src.commons.constants import STATUS, START_DATE, END_DATE
+
 
 class CarRentalVehicle(BaseModel):
     vehicle_id: int
@@ -13,17 +15,17 @@ class CarRentalVehicle(BaseModel):
     @field_validator("status")
     @classmethod
     def check_availablity(cls, value):
-        if value.lower() not in ["available", "unavailable"]:
+        if value.lower() not in STATUS:
             raise ValueError("status shold be a valid one")
         return value
 
     @field_validator("year")
     @classmethod
     def check_year(cls, value):
-        if value >= 1990 and value <= 2026:
+        if value >= START_DATE and value <= END_DATE:
             return value
         else:
-            raise  ValueError("Year should be betrween dvkndsknv")
+            raise ValueError("Year should be betrween dvkndsknv")
 
 
 class CarRentalBody(BaseModel):
@@ -41,4 +43,3 @@ class CarRentalHeader(BaseModel):
 class CarRentalSchema(BaseModel):
     header: CarRentalHeader
     body: CarRentalBody
-
