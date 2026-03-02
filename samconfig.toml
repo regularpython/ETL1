@@ -4,7 +4,7 @@ version = 0.1
 
 [default]
 [default.global.parameters]
-stack_name = "ETL1"
+stack_name = "ETL1-DSR"
 
 [default.build.parameters]
 cached = true
